@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form </title>
+    <style>
+        label{
+            color: blueviolet;
+            font-style: italic;
+        }
+        input[type="text"], input[type="number"], input[type="password"], input[type="date"],textarea{
+            background-color: aqua;  
+        }
+        #stable{
+            background-color: aquamarine;
+            font-weight: 40px;
+        }
+        #sform{
+            background-color:#92a8d1;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="stable">
+        <h1><b>Student Details</b></h1><br>
+        <table border="1" style="text-align: center; color: blue;">
+            <thead>
+                <tr>
+                <th>S.No</th>
+                <th>name</th>
+                <th>email</th>
+                <th>sports</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Pradeep</td>
+                    <td>pradi@gmail.com</td>
+                    <td>football</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Sakshi</td>
+                    <td>sakshi@gmail.com</td>
+                    <td>table-tennis</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Shaily</td>
+                    <td>shaily@gmail.com</td>
+                    <td>football</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="sform">
+        <h1 style="text-align: center; display: block;">Register with us</h1>
+        <form>
+            <label for="name"><b>Name :</b></label>
+            <input type="text" placeholder="Enter name" name="name" id="name" /><br><br>
+
+            <label for="phone"><b>Phone Number :</b> </label>
+            <input type="number" placeholder="Enter Phone number" id="phone" name="phone" /> <br><br>
+
+            <label for="Email"><b>Email :</b> </label>
+            <input type="text" placeholder="Enter email" name="Email" id="Email" /><br><br>
+
+            <label for="DOB"><b>Date of birth :</b></label>
+            <input type="date" id="DOB" name="DOB" /> <br /><br>
+
+            <label><b>University : </b></label>
+            <input type="text" placeholder="Enter University" id="uni" name="uni" /><br><br>
+
+            <label><b>Course :</b></label>
+            <select>
+                <option value="Course">Course</option>
+                <option value="BCA">BCA</option>
+                <option value="BCA">B Tech</option>
+                <option value="BCA">MBA</option>
+                <option value="BCA">M Tech</option>
+                <option value="MCA">MCA</option>
+            </select><br /><br>
+
+            <label><b>Gender :</b></label>
+            <input type="radio" id="male" name="Gender" value="male" /> <label for="male">male</label>
+            <input type="radio" id="female" name="Gender" value="female" /> <label for="female">female</label>
+            <input type="radio" id="other" name="Gender" value="other" /> <label for="other">other</label><br /><br>
+
+            <label><b>Address :</b></label><br>
+            <textarea value="address"></textarea><br><br>
+
+            <label><b>Password:</b></label>
+            <input type="password" id="password" name="password" /> <br /><br>
+
+            <label for="upload"><b>Upload pic</b></label><br />
+            <input type="file" id="upload" name="profile pic" /><br /><br>
+
+
+
+            <input type="submit" value="Register" />
+        </form>
+
+    </div>
+
+</body>
+
+</html>

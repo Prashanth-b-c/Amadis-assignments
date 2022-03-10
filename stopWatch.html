@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StopWatch</title>
+    <style>
+        body {
+            background: #1f2833;
+            color: #ffffff;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 200;
+
+            text-align: center;
+            line-height: 59px;
+
+            padding: 0 64px;
+            margin: 0;
+        }
+
+        .logo {
+            display: grid;
+            justify-items: center;
+            grid-row-gap: 23px;
+            width: 100%;
+            padding-top: 25px;
+        }
+
+
+
+        #stopwatch {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 270px;
+            width: 270px;
+
+            border: 2px solid;
+            border-radius: 50%;
+
+            font-size: 60px;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -55%);
+
+        }
+
+        button {
+            width: 100px;
+            height: 30px;
+            border: 3px soldi white;
+            border-radius: 50px;
+            background: DodgerBlue;
+            color: white;
+            cursor: pointer;
+            outline: none;
+        }
+
+        #buttons {
+            position: absolute;
+            top: 77%;
+            left: 48.4%;
+            transform: translate(-51.6%, -45%);
+        }
+
+        #buttons li {
+            display: inline;
+            padding-left: 10px;
+        }
+
+        .name {
+            font-weight: 900;
+            color: #fba92c;
+            text-shadow: 0 0 0px #fff, 0 0 50px #eef13a;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <h1 class="name"> STOPWATCH</h1>
+        <div id="stopwatch">
+            00:00:00
+        </div>
+        <ul id="buttons">
+            <li><button onclick="startWatch()">Start</button></li>
+            <li><button onclick="stopWatch()">Stop</button></li>
+
+            <li><button onclick="resetWatch()">Reset</button></li>
+        </ul>
+    </div>
+    <script>
+        const timer = document.getElementById('stopwatch');
+
+        var hr = 0;
+        var min = 0;
+        var sec = 0;
+        var stoptime = true;
+
+        function startWatch() {
+            if (stoptime == true) {
+                stoptime = false;
+                timerCycle();
+            }
+        }
+        function stopWatch() {
+            if (stoptime == false) {
+                stoptime = true;
+            }
+        }
+
+        function timerCycle() {
+            if (stoptime == false) {
+                sec = parseInt(sec);
+                min = parseInt(min);
+                hr = parseInt(hr);
+
+                sec = sec + 1;
+
+                if (sec == 60) {
+                    min = min + 1;
+                    sec = 0;
+                }
+                if (min == 60) {
+                    hr = hr + 1;
+                    min = 0;
+                    sec = 0;
+                }
+
+                if (sec < 10 || sec == 0) {
+                    sec = '0' + sec;
+                }
+                if (min < 10 || min == 0) {
+                    min = '0' + min;
+                }
+                if (hr < 10 || hr == 0) {
+                    hr = '0' + hr;
+                }
+
+                timer.innerHTML = hr + ':' + min + ':' + sec;
+
+                setTimeout("timerCycle()", 100);
+            }
+        }
+
+        function resetWatch() {
+            timer.innerHTML = '00:00:00';
+            stoptime = true;
+            hr = 0;
+            sec = 0;
+            min = 0;
+        }
+    </script>
+</body>
+
+</html>
