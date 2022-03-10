@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <link rel="stylesheet" href="style.css">
+
+      
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title> My Portfolio</title>
+    </head>
+    <body>
+        
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Prashanth B C</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#Projects" class="nav__link">Projects</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            
+            <section class="home" id="home">
+                <div class="home__container bd-grid">
+                    
+                    <h1 class="home__title"  ><span>I am Prashanth</span></h1>
+                </div>
+               
+            </section>
+            
+          
+            <section class="about section" id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+
+                    <div>
+                        
+                        <h2 class="about__subtitle">I'am Prashanth</h2>
+                        <span class="about__profession">Frontend Developer</span>
+                        
+                        <p class="about__text">A self-motivated IT professional  and proficiency 
+                            in ReactJS,as well as strong skills and ability in writing clean and efficient code.</p>
+
+                        <div class="about__social">
+                            <a href="https://www.linkedin.com/in/prashanth-b-c-68a1a2180" class="about__social-icon" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                            <a href="https://github.com/Prashanth-b-c" class="about__social-icon" target="_blank"><i class='bx bxl-github' ></i></a>
+                        </div>
+                    </div>
+                    <div class="abt__img">
+                        <img src="img/abt.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+
+            
+            <section class="skills section" id="skills">
+                <h2 class="section-title">My skills</h2>
+
+                <div class="skills__container bd-grid">
+                    <div class="skills__box">
+                        <h3 class="skills__subtitle">Frontend Development</h3>
+                        <span class="skills__name">Html</span>
+                        <span class="skills__name">Css</span>
+                        <span class="skills__name">Javascript</span>
+                        <span class="skills__name">React.Js</span>
+                    </div>
+
+                    <div class="skills__img">
+                        <img src="img/skill.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <section class="portfolio section" id="Projects">
+                <h2 class="section-title">Projects</h2>
+
+                <div class="portfolio__container bd-grid">
+                    <div class="portfolio__img">
+                        <a href="">
+                        <img height="30px"  src="img/bill1.jpg"  alt="">
+                        <h3>Billing Software</h3>
+                        </a>
+                        <a href="https://billing-app-bc.netlify.app/" class="portfolio__button" target="_blank">Live</a>
+                    </div>
+                    <div class="portfolio__img">
+                        <a href="">
+                        <img height="30px"  src="img/note.jpg"  alt="">
+                        <h3>Notes App</h3>
+                        </a>
+                        <a href="https://github.com/Prashanth-b-c/Notes-app" class="portfolio__button" target="_blank">Code</a>
+                    </div>
+                    <div class="portfolio__img">
+                        <a href="">
+                        <img height="30px"  src="img/movie.jpg"  alt="">
+                        <h3>Movie App</h3>
+                        </a>
+                        <a href="https://github.com/Prashanth-b-c/Movie-app" class="portfolio__button" target="_blank">Code</a>
+                    </div>
+             
+            </section>
+
+           
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact With Me</h2>
+
+                <div class="contact__container bd-grid">
+                    <div class="contact__info">
+                        <h3 class="contact__subtitle">EMAIL</h3>
+                        <span class="contact__text">bcprashanth615@gmail.com</span>
+
+                        <h3 class="contact__subtitle">Linkedin</h3>
+                        <span class="contact__text">https://www.linkedin.com/in/prashanth-b-c-68a1a2180</span>
+                    </div>
+
+                    <form action="" class="contact__form">
+                        <div class="contact__inputs">
+                            <input type="text" placeholder="Name" class="contact__input">
+                            <input type="mail" placeholder="Email" class="contact__input">
+                        </div>
+
+                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+
+                        <input type="submit" value="Submit" class="contact__button">
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer section">
+            <div class="footer__container bd-grid">
+                <div class="footer__data">
+                    <h2 class="footer__title">Prashanth</h2>
+                    <p class="footer__text">I'm Prashanth and this is my personal website</p>
+                </div>
+            </div>
+        </footer>
+
+        
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        
+        <script src="app.js"></script>
+    </body>
+</html>
